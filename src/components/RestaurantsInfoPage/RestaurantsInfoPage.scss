@@ -1,0 +1,143 @@
+.restaurant-info {
+  background-image: url("https://d1ralsognjng37.cloudfront.net/9bd34c84-9549-4fdf-a97e-869924afc668");
+  background-size: cover;
+  width: 100%;
+  height: 380px;
+  padding-top: 85px;
+}
+
+.restaurant-info-card {
+  background-color: #fff;
+  width: 757px;
+  height: auto;
+  padding-left: 264px;
+  padding-top: 24px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    color: #1D1D1D;
+  }
+
+  &__categories {
+    font-size: 14px;
+    line-height: 21px;
+    color: #757575;
+    margin: 13px 0;
+  }
+}
+
+.restaurant-info__text {
+  margin: 18px 0;
+  display: inline-block;
+  width: 336px;
+  height: 20px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.showe-text {
+  line-height: 1;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #247A00;
+  cursor: pointer;
+}
+
+.text-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.sections-list {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__item {
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 72px;
+    height: 72px;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  &__item-active {
+    cursor: auto;
+  }
+
+  &__item-active::after {
+
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 105%;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+  }
+}
+
+.wrapper {
+  height: 1000px;
+}
+
+.list-items {
+  margin-top: 40px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &-dish {
+    margin: 0 20px 40px 0;
+    overflow: hidden;
+    display: flex;
+    width: 348px;
+    height: 158px;
+    border: 1px solid #E0E0E0;
+
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 16px;
+      width: 189px;
+    }
+
+    &__title {
+      font-size: 20px
+    }
+
+    // &__description {
+    //   color: #626262;
+    //   width: 158px;
+    //   height: 63px;
+    //   overflow: hidden;
+    // }
+
+    &__price {
+      font-size: 16px;
+    }
+    &__price::before {
+      content: '£';
+    }
+
+    &__img {
+      width: 158px;
+      height: 158px;
+      object-fit: cover;
+    }
+  }
+}

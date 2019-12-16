@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { RestaurantsListPage } from './RestaurantsListPage';
+
+import { RestaurantsInfoPage } from './RestaurantsInfoPage';
 import { loadRestaurants, loadRestaurant } from '../../store/actions';
 import {
   selectRestaurantsList,
@@ -25,6 +26,6 @@ const mapDispatch2Props = {
 const Enhanced = connect(
   mapState2Props,
   mapDispatch2Props,
-)(RestaurantsListPage);
+)(RestaurantsInfoPage);
 
-export { Enhanced as RestaurantsListPage };
+export { Enhanced as RestaurantsInfoPage };
