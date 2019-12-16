@@ -19,7 +19,7 @@ export function App() {
       <BrowserRouter>
         <Switch>
           <Route
-            path="/"
+            path="react_uber-eats/"
             exact
             render={() => (
               <main className="page">
@@ -30,7 +30,7 @@ export function App() {
             )}
           />
           <Route
-            path="/info"
+            path="react_uber-eats/info"
             render={() => <RestaurantsInfoPage active={active} />}
           />
         </Switch>
