@@ -19,7 +19,7 @@ export function App() {
       <BrowserRouter>
         <Switch>
           <Route
-            path="/react_uber-eats"
+            path="/"
             exact
             render={() => (
               <main className="page">

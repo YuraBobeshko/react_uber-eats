@@ -19,7 +19,8 @@
     "react-scroll-up-button": "^1.6.4",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
     "@mate-academy/eslint-config-react": "*",
