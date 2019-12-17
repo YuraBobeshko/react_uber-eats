@@ -19,7 +19,6 @@ export class RestaurantsListPage extends Component {
       restaurantsData,
       error,
       isLoading,
-      func
     } = this.props;
 
     if (isLoading) {
@@ -49,7 +48,6 @@ export class RestaurantsListPage extends Component {
               imageUrl={heroImageUrl}
               categories={categories}
               etaRange={etaRange.text || DEFAULT_ETA_RANGE}
-              func={func}
             />
           );
         })}

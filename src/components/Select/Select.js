@@ -17,10 +17,9 @@ export const Select = (props) => {
         value={value}
         onChange={onSelect}
         className="select__input"
-        defaultValue={value}
       >
         {options.map(({ value: optionValue, label }) => (
-          <option value={optionValue} selected={value === optionValue}>
+          <option value={optionValue}>
             {label}
           </option>
         ))}

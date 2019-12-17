@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import './App.css';
 import ScrollUpButton from 'react-scroll-up-button';
@@ -12,27 +12,23 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { RestaurantsInfoPage } from './components/RestaurantsInfoPage/index';
 
 export function App() {
-  const [active, setactive] = useState(null);
   return (
     <Provider store={store}>
       <Header />
       <BrowserRouter>
         <Switch>
           <Route
-            path="/"
+            path="/react_uber-eats"
             exact
             render={() => (
               <main className="page">
                 <div className="content">
-                  <RestaurantsListPage func={setactive} />
+                  <RestaurantsListPage />
                 </div>
               </main>
             )}
           />
-          <Route
-            path="/info"
-            render={() => <RestaurantsInfoPage active={active} />}
-          />
+          <Route path="/info" render={() => <RestaurantsInfoPage />} />
         </Switch>
       </BrowserRouter>
       <Footer />

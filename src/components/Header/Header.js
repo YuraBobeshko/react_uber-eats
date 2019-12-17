@@ -49,7 +49,7 @@ export class Header extends Component {
       <header className="header">
         <div className="content">
           <div className="header__inner">
-            <a href='http://localhost:3000/'>
+            <a href='/react_uber-eats'>
               <img
                 src="./images/logo.svg"
                 alt="Uber Eats"

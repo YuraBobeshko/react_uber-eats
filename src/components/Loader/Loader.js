@@ -1,9 +1,7 @@
 import React from 'react';
 import './Loader.scss';
 
-export const Loader = (props) => {
-  const {} = props;
-
+export const Loader = () => {
   return (
     <div className="loader-container">
       <div className="lds-default">

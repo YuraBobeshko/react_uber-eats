@@ -56,6 +56,7 @@
   align-items: center;
 
   &__item {
+    color: #000;
     cursor: pointer;
     margin-left: 10px;
     display: inline-block;
@@ -88,6 +89,16 @@
 
 .list-items {
   margin-top: 40px;
+
+  & > div {
+    position: relative;
+  }
+
+  &__id {
+    top: -100px;
+    position: absolute;
+    display: block;
+  }
 
   &__content {
     display: flex;
@@ -140,4 +151,8 @@
       object-fit: cover;
     }
   }
+}
+
+.wrapper-СhangeDish {
+  background-color: red;
 }
