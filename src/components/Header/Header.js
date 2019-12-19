@@ -40,7 +40,7 @@ export class Header extends Component {
       search,
       saveSearch,
     } = this.props;
-    
+
     const {
       address,
       time,
@@ -110,7 +110,7 @@ export class Header extends Component {
 
             <a
               className="header__link"
-              href="/sign-in"
+              href="#"
             >
               Sign In
             </a>
