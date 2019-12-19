@@ -47,7 +47,7 @@ console.log(this.state)
     const entities = [...Object.values(entitiesMap)]
     function createMarkup(data) { return {__html: data}; };
     return (
-      <div className='yy'>
+      <div className='section'>
         {showСhangeDish ? (
           <>
           <div className="wrapper-СhangeDish">
@@ -92,7 +92,7 @@ console.log(this.state)
             <div className="list-items">
               {currentSections.map((section, index) => {
                 return (
-                  <div key={section.uuid}>
+                  <div className='list-item' key={section.uuid}>
                     <span
                       className="list-items__id"
                       id={`section-${index}`}
