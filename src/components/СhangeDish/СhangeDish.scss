@@ -1,0 +1,103 @@
+.changeDish{
+  top: 80px;
+  height: auto;
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+  background-color: #fff !important;
+
+  &__img {
+    width: 716px;
+    height: 373px;
+    object-fit: cover;
+  }
+
+  &__button {
+    border-radius: 50%;
+    background: #FFFFFF;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 646px;
+    top: 25px;
+    border: 1px solid #000 ;
+  }
+
+  &__title {
+    margin: 50px 34px 0;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  &__itemDescription {
+    margin: 0 34px 31px;
+    color: #626262;
+  }
+
+  &-block {
+    background-color: #F5F5F5;
+    padding: 17px 34px;
+
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    &__des {
+      color: #757575;
+    }
+
+    &__label {
+      padding-left: 34px;
+      display: flex;
+      height: 70px;
+      align-items: center;
+    }
+
+    &__des-input {
+      white-space: nowrap;
+    }
+  }
+}
+
+.errorWrap {
+  background-color: #fff;
+  width: 300px;
+  height: 300px;
+}
+
+
+
+.option {
+  padding: 24px 34px;
+  display: block;
+}
+
+.check__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.check__box {
+  position: absolute;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em rgb(224, 198, 79);
+  width: 20px;
+  height: 22px;
+  border: 1px solid #D3D3D3;
+  box-sizing: border-box;
+}
+
+.check__input:checked + .check__box {
+  background-color: rgb(224, 198, 79);
+  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fcheck.svg?1550563475518);
+}
+
+.text {
+  margin-left: 40px;
+}

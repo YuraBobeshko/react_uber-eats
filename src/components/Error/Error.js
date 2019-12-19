@@ -11,7 +11,7 @@ export const Error = (props) => {
         {message}
       </p>
 
-      <a href="/" className="error__link">
+      <a href="/react_uber-eats" className="error__link">
         Go to Home
       </a>
     </div>

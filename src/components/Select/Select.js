@@ -19,13 +19,13 @@ export const Select = (props) => {
         className="select__input"
       >
         {options.map(({ value: optionValue, label }) => (
-          <option value={optionValue}>
+          <option key={label} value={optionValue}>
             {label}
           </option>
         ))}
       </select>
       {!!iconUrl && (
-        <img className="select__icon" src={iconUrl} alt="select icon"/>
+        <img className="select__icon" src={iconUrl} alt="select icon" />
       )}
 
       <img

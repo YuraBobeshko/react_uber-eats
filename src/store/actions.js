@@ -4,6 +4,7 @@ export const ACTION_TYPES = {
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
   SAVE_RESTAURANT: 'SAVE_RESTAURANT',
+  SAVE_SEARCH: 'SAVE_SEARCH',
 };
 
 const saveRestaurants = data => ({
@@ -29,6 +30,11 @@ const saveRestaurant = data => ({
   payload: data,
 });
 
+export const saveSearch = data => ({
+  type: ACTION_TYPES.SAVE_SEARCH,
+  payload: data,
+});
+
 export const loadRestaurants = () => (dispatch) => {
   dispatch(startLoading());
 
@@ -48,6 +54,5 @@ export const loadRestaurant = (data) => (dispatch) => {
       dispatch(saveRestaurant(data));
     })
     .catch(error => dispatch(setRestaurantsError(error.message)))
-    // .finally(() => dispatch(stopLoading()));
 };
 

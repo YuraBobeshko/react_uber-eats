@@ -19,8 +19,9 @@ export class RestaurantsListPage extends Component {
       restaurantsData,
       error,
       isLoading,
+      search,
     } = this.props;
-
+let restaurantsDataF = [...restaurantsData];
     if (isLoading) {
       return <Loader />;
     }
@@ -28,10 +29,13 @@ export class RestaurantsListPage extends Component {
     if (error) {
       return <Error message={error} />;
     }
-
+    console.log(this.props)
+    if(search.trim() !== '') {
+      restaurantsDataF = restaurantsDataF.filter( restaurant => restaurant.title.toLowerCase().includes(search.toLowerCase()))
+    }
     return (
       <div className="restaurants-list">
-        {restaurantsData.map(restaurant => {
+        {restaurantsDataF.map(restaurant => {
           const {
             uuid,
             title,

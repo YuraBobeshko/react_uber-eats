@@ -6,7 +6,6 @@ export class Header extends Component {
   state = {
     address: '',
     time: '',
-    search: '',
     isMobileSearchVisible: false,
     isMobileDeliveryInfoVisible: false,
   };
@@ -38,9 +37,13 @@ export class Header extends Component {
 
   render() {
     const {
+      search,
+      saveSearch,
+    } = this.props;
+    
+    const {
       address,
       time,
-      search,
       isMobileSearchVisible,
       isMobileDeliveryInfoVisible,
     } = this.state;
@@ -76,7 +79,7 @@ export class Header extends Component {
               <Input
                 name="search"
                 value={search}
-                onChange={this.handleChange}
+                onChange={(event) => saveSearch(event.target.value)}
                 placeholder="Search"
                 iconUrl="./images/search.svg"
               />

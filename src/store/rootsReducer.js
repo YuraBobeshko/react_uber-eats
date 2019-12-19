@@ -5,10 +5,19 @@ const initialState = {
   restaurantListInfo: null,
   isLoading: false,
   error: null,
+  search: '',
 };
 
 export function rootsReducer(state = initialState, action) {
   switch (action.type) {
+
+    case ACTION_TYPES.SAVE_SEARCH: {
+      const { payload } = action;
+      return {
+        ...state,
+        search: payload,
+      };
+    }
 
     case ACTION_TYPES.SAVE_RESTAURANT: {
       const { payload } = action;

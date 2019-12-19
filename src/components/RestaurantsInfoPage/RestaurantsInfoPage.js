@@ -2,25 +2,25 @@ import React, { Component } from 'react';
 import './RestaurantsInfoPage.scss';
 import { Loader } from '../Loader/Loader';
 import СhangeDish from '../СhangeDish/СhangeDish'
+
 export class RestaurantsInfoPage extends Component {
   state = {
     activeSection: '',
     showСhangeDish: false,
-    data: null,
+    uuidDish: null,
   }
 
   componentDidMount() {
     const { loadRestaurant } = this.props;
-
     loadRestaurant(window.location.href.match(/\?.+/gs)[0].replace(/\?/gs, ""));
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
   render(){
     const {
       activeSection,
       showСhangeDish,
-      data,
+      uuidDish,
     } = this.state;
 
     const {
@@ -39,15 +39,24 @@ export class RestaurantsInfoPage extends Component {
       entitiesMap,
     } = restaurantListInfo;
 
-console.log(restaurantListInfo)
+const setСhangeDish = (data = null) => {
+  this.setState({uuidDish:data, showСhangeDish: !this.state.showСhangeDish})
+}
+console.log(this.state)
     const currentSections = [...Object.values(sectionsMap)].filter( item => sections.includes(item.uuid))
     const entities = [...Object.values(entitiesMap)]
     function createMarkup(data) { return {__html: data}; };
     return (
-      <>
-        <div hidden={showСhangeDish} className='wrapper-СhangeDish'>
-          <СhangeDish data={data} />
-        </div>
+      <div className='yy'>
+        {showСhangeDish ? (
+          <>
+          <div className="wrapper-СhangeDish">
+              <СhangeDish data={uuidDish} func={setСhangeDish} />
+            </div>
+            <span onClick={() => setСhangeDish()} className="bc"></span>
+          </>
+        ) : null
+        }
         <div className="restaurant-info">
           <div className="restaurant-info-card">
             <p className="restaurant-info-card__title">{title}</p>
@@ -83,16 +92,18 @@ console.log(restaurantListInfo)
             <div className="list-items">
               {currentSections.map((section, index) => {
                 return (
-                  <div
-                    key={section.uuid}
-                  >
-                    <span className='list-items__id' id={`section-${index}`}></span>
+                  <div key={section.uuid}>
+                    <span
+                      className="list-items__id"
+                      id={`section-${index}`}
+                    ></span>
                     <h1 className="list-items__title">{section.title}</h1>
                     <div className="list-items__content">
                       {entities
                         .filter(item => section.itemUuids.includes(item.uuid))
                         .map(item => (
                           <div
+                            onClick={() => setСhangeDish(item.uuid)}
                             key={item.uuid}
                             className="list-items-dish"
                           >
@@ -118,7 +129,7 @@ console.log(restaurantListInfo)
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 };

@@ -15,6 +15,11 @@ export const selectRestaurantsList = createSelector(
   },
 );
 
+export const selectSearch = createSelector(
+  rootSelector,
+  ({search}) => search
+);
+
 export const selectRestaurantListInfo = createSelector(
   rootSelector,
   ({ restaurantListInfo }) => restaurantListInfo

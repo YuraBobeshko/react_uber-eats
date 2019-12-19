@@ -6,10 +6,12 @@ import { store } from './store';
 import {
   RestaurantsListPage,
 } from './components/RestaurantsListPage/index';
-import { Header } from './components/Header/Header';
+import { Header } from './components/Header/index';
 import { Footer } from './components/Footer/Footer';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { RestaurantsInfoPage } from './components/RestaurantsInfoPage/index';
+import './App.css'
+
 
 export function App() {
   return (
